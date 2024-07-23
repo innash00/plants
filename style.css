@@ -192,6 +192,7 @@ justify-content: space-between;
 align-items: center;
 padding-left: 109px;
 padding-right: 109px;
+scroll-margin-top: 134px;
 }
 
 .houseplant {
@@ -223,6 +224,7 @@ margin-top: 30px;
 
 .service {
 background-color: #EDF2EC;
+scroll-margin-top: 134px;
 }
 
 .service-content {
@@ -311,6 +313,7 @@ transition: all 0.3s ease;
 display: flex;
 padding: 60px 109px 109px;
 justify-content: space-between;
+scroll-margin-top: 134px;
 }
 
 .prices-header {
@@ -330,6 +333,11 @@ display: flex;
 flex-direction: column;
 justify-content: space-around;
 align-items: center;
+transition: all 0.3s ease;
+}
+
+.open-rates {
+  height: 390px;
 }
 
 .rate-button-title {
@@ -340,13 +348,89 @@ line-height: 20px;
 }
 
 .rate-button {
-width: 250px;
-height: 50px;
-background-color: #EDF2EC;
-border-radius: 20px;
+  width: 250px;
+  height: 50px;
+  background-color: #EDF2EC;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.rate-header {
 display: flex;
-align-items: center;
 justify-content: space-around;
+height: 50px;
+align-items: center;
+}
+
+.rate-footer-text {
+  font-size: 10px;
+  font-weight: 300;
+  font-family: 'Inter';
+  line-height: 10px;
+}
+
+.rate-price {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Inter';
+  line-height: 20px;
+  color: #E06733;
+}
+
+.rate-price-hour {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Inter';
+  line-height: 40px;
+}
+
+.order-button {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Inter';
+  line-height: 23px;
+  color: #717171;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+  text-decoration: none;
+  height: 25px;
+  width: 86px;
+  display: block;
+  text-align: center;
+}
+
+.rate-footer {
+  display: none;
+}
+
+.rate-footer-line {
+  font-size: 10px;
+  font-weight: 300;
+  font-family: 'Inter';
+  line-height: 0px;
+  margin-bottom: 24px;
+}
+
+.arrow {
+  transition: all 0.3s ease;
+  width: 16px;
+  height: 16px;
+}
+
+.arrow.active {
+  transform: rotate(180deg);
+  filter: brightness(80%)
+}
+
+.open-rate-footer {
+  display: block;
+  margin: 0px 10px 20px 20px;
+}
+
+.open-rate-button {
+  height: 178px;
+  background-color: #d6e7d2;
 }
 
 .prices-text {
@@ -430,6 +514,11 @@ justify-content: space-between;
 padding-left: 20px;
 padding-right: 20px;
 margin-top: 140px;
+transition: all 0.3s ease;
+}
+
+.select-city.active {
+  background-color: #C1E698;
 }
 
 .select-title {
@@ -437,6 +526,98 @@ font-size: 20px;
 font-weight: 400;
 font-family: 'Inter';
 color: #717171
+}
+
+.city-card {
+  background-color: #EDF2EC;
+  border: 1px solid black;
+  border-radius: 15px;
+  height: 214px;
+  margin-top: 47px;
+  padding: 17px 35px 32px;
+  grid-template-columns: 130px auto;
+  display: none;
+  z-index: 0;
+  position: absolute;
+  width: 450px;
+  margin-top: 220px;  
+}
+
+.city-card.active {
+  display: grid;
+}
+
+.city-metadata {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Inter';
+  line-height: 40px;
+}
+
+.button-call-us {
+  border: 1px solid #E06733;
+  background-color: #EDF2EC;
+  color: #717171;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Inika';
+  line-height: 24px;
+  border-radius: 10px;
+  width: 120px;
+  text-align: center;
+  height: 26px;
+  justify-self: center;
+  grid-column: span 2;
+}
+
+.city-data {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Inter';
+  line-height: 40px;
+  color: #717171;
+}
+
+.select-arrow {
+  transition: all 0.3s ease;
+  filter: brightness(80%)
+}
+
+.select-arrow.active {
+  transform: rotate(180deg);
+}
+
+.city-window {
+  background-color: #DCE9D9;
+  padding: 15px 20px 31px 20px;
+  display: none;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.city-window.active {
+  display: block;
+}
+
+.city-window p {
+  color: #499a18;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Inter';
+  line-height: 30px;
+  border-bottom: 1px solid #d9d9d9;
+  padding-top: 15px;
+  transition: all 0.3s ease;
+}
+
+.city-window p:hover {
+  color: #717171;
+  border-bottom: 1px solid #717171;
+}
+
+.city-contacts {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer {
@@ -596,12 +777,15 @@ align-items: center;
   order: 3;
   width: 200px;
   height: 248.5px;
-  margin-top: 250px;
+  margin-top: 300px;
 }
 
 .select-city {
-  order: 2;
   margin-top: 100px;
+}
+
+.city-contacts {
+  order: 2;
 }
 
 .select-title {
@@ -703,7 +887,7 @@ align-items: center;
 }
 
 .unscroll {
-  overflow:hidden;
+  overflow: hidden;
 }
 
 .leafs {

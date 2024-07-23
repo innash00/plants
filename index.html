@@ -46,7 +46,7 @@
             <div class="welcome-section">
                 <p class="welcome-title">We grow <span class="word-plants">plants</span> and give you oxygen</p>
                 <p class="welcome-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                <a href="/" class="button-learn-more">LEARN MORE</a>
+                <a href="#service" class="button-learn-more">LEARN MORE</a>
             </div>
         </section>
 
@@ -105,23 +105,47 @@
             <div class="prices-content">
                 <h2 class="prices-header">Prices</h2>
                     <div class="rates">
-                        <div class="rate-button">
-                            <p class="rate-button-title">Basics</p>
-                            <img src="images/accordion_btn.png" alt="arrow" class="arrow">
+                        <div class="rate-button" id="rate-button1">
+                            <div class="rate-header">
+                                <p class="rate-button-title">Basics&emsp;</p>
+                                <img src="images/accordion_btn.png" alt="arrow" class="arrow" id="arrow1">
+                            </div>
+                            <div class="rate-footer" id="rate-footer1">
+                                <p class="rate-footer-line">_______________________________________</p>
+                                <p class="rate-footer-text">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
+                                <p class="rate-price-hour"><span class="rate-price">$15</span> / per hour</p>
+                                <a href="#contacts" class="order-button">Order</a>
+                            </div>
                         </div>
-                        <div class="rate-button">
-                            <p class="rate-button-title">Standart</p>
-                            <img src="images/accordion_btn.png" alt="arrow" class="arrow">
+                        <div class="rate-button" id="rate-button2">
+                            <div class="rate-header">
+                                <p class="rate-button-title">Standart</p>
+                                <img src="images/accordion_btn.png" alt="arrow" class="arrow" id="arrow2">
+                            </div>
+                            <div class="rate-footer" id="rate-footer2">
+                                <p class="rate-footer-line">_______________________________________</p>
+                                <p class="rate-footer-text">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
+                                <p class="rate-price-hour"><span class="rate-price">$25</span> / per hour</p>
+                                <a href="#contacts" class="order-button">Order</a>
+                            </div>
                         </div>
-                        <div class="rate-button">
-                            <p class="rate-button-title">Pro care</p>
-                            <img src="images/accordion_btn.png" alt="arrow" class="arrow">
+                        <div class="rate-button" id="rate-button3">
+                            <div class="rate-header">
+                                <p class="rate-button-title">Pro care</p>
+                                <img src="images/accordion_btn.png" alt="arrow" class="arrow" id="arrow3">
+                            </div>
+                            <div class="rate-footer" id="rate-footer3">
+                                <p class="rate-footer-line">_______________________________________</p>
+                                <p class="rate-footer-text">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
+                                <p class="rate-price-hour"><span class="rate-price">$35</span> / per hour</p>
+                                <a href="#contacts" class="order-button">Order</a>
+                            </div>
                         </div>
                     </div>
             </div>
             <div class="prices-info">
                 <p class="prices-text">Our best <span class="word-gardeners">gardeners</span> are ready to help you</p>
-                <a href="/" class="contact-button">Contact us</a>
+                <a href="#contacts" class="contact-button">Contact us</a>
                 <div class="leafs2">
                     <img src="images/leaf 2.png" alt="leaf2" class="leaf22">
                     <img src="images/leaf 1.png" alt="leaf1" class="leaf21">
@@ -134,9 +158,31 @@
         <section class="contacts" id="contacts">
             <img src="images/contact_woman 1.png" alt="contact_woman" class="contact-woman">
             <h2 class="contacts-title">Contact us</h2>
-            <div class="select-city">
-                <p class="select-title">City</p>
-                <img src="images/accordion_btn.png" alt="arrow" class="arrow">
+            <div class="city-contacts">
+                <div class="select-city">
+                    <p class="select-title">City</p>
+                    <img src="images/accordion_btn.png" alt="arrow" class="select-arrow">
+                </div>
+                <div class="city-window">
+                    <p>Canandaigua, NY</p>
+                    <p>New York City</p>
+                    <p>Yonkers, NY</p>
+                    <p>Sherrill, NY</p>
+                </div>
+            
+                <div class="city-card">
+                    <div class="city-metadata">
+                        <p>City:</p>
+                        <p>Phone:</p>
+                        <p>Office adress:</p>
+                    </div>
+                    <div class="city-data">
+                        <p class="city-name">name</p>
+                        <p class="city-phone">phone</p>
+                        <p class="city-adress">adress</p>
+                    </div>
+                    <button class="button-call-us" onclick="makeCall()">Call us</button>
+                </div>
             </div>
         </section>
     </main>
