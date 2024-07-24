@@ -62,8 +62,8 @@ align-items: center;
 .header {
 position: fixed;
 right: 0;
-left: 0;
-top: 0;
+left: 0;  
+top: 0; 
 z-index: 10;
 }
 
@@ -93,7 +93,7 @@ margin-left: -8.85px;
 
 .main-menu {
 padding-right: 109px;
-margin-top: -18px;
+margin-top: -23px;
 height: 50px;
 width: 452px;
 display: flex;
@@ -121,6 +121,7 @@ background: #EDF2EC;
 display: flex;
 justify-content: space-around;
 padding-top: 96px;
+width: 100%;
 }
 
 .leafs {
@@ -190,14 +191,11 @@ margin-top: 40px;
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding-left: 109px;
-padding-right: 109px;
+padding: 140px 109px 140px 109px;
 scroll-margin-top: 134px;
 }
 
 .houseplant {
-margin-bottom: 94px;
-margin-top: 93px;
 margin-left: 153px;
 }
 
@@ -229,12 +227,12 @@ scroll-margin-top: 134px;
 
 .service-content {
 display: flex;
-width: 1340px;
 height: 94px;
 padding-top: 60px;
 margin-left: 109px;
-/* justify-content: space-between; */
+justify-content: space-between;
 align-items: center;
+margin-right: 109px;
 }
 
 .service-title {
@@ -244,7 +242,6 @@ font-family: 'Inika';
 line-height: 40px;
 color: #499a18;
 width: 306px;
-margin-right: 150px;
 }
 
 .service-buttons {
@@ -252,6 +249,7 @@ width: 559px;
 justify-content: space-between;
 display: flex;
 flex-wrap: wrap;
+gap: 10px;
 }
 
 .choice-button {
@@ -280,7 +278,9 @@ filter: blur(3px);
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 grid-row-gap: 40px;
-padding: 109px 124px 109px;
+padding-left: 109px;
+padding-right: 109px;
+margin-top: 100px;
 }
 
 .card-header {
@@ -439,7 +439,6 @@ font-weight: 700;
 font-family: 'Inter';
 line-height: 50px;
 text-align: right;
-width: 752px;
 }
 
 .word-gardeners {
@@ -490,9 +489,8 @@ align-self: end;
 .contacts {
 background-color: #EDF2EC;
 display: flex;
-padding: 60px 109px 109px;
+padding: 60px 109px 0px 109px;
 justify-content: space-between;
-padding-bottom: 0px;
 }
 
 .contacts-title {
@@ -649,7 +647,44 @@ justify-content: space-between;
 align-items: center;
 }
 
+@media (max-width: 1120px) {
+  .contact-woman {
+    width: 250px;
+    margin-top: 150px;
+  }
+
+  .select-city {
+    width: 290px;
+  }
+
+  .contacts {
+    padding-left: 70px;
+  }
+
+  .city-card {
+    width: 290px;
+    padding: 17px;
+  }
+
+  .city-data, .city-metadata {
+    font-size: 14px;
+  }
+
+  .houseplant {
+    margin-left: 70px;
+    width: 344px;
+  }
+}
+
 @media (max-width: 768px) {
+.main-menu {
+  width: 320px;
+}
+
+.link-menu {
+  font-size: 13px;
+}
+
 .welcome{
   flex-direction: row-reverse;
 }
@@ -699,7 +734,6 @@ align-items: center;
   font-size: 35px;
   line-height: 45px;
   align-self: center;
-  margin-top: 40px;
 }
 
 .about-text {
@@ -731,10 +765,21 @@ align-items: center;
   font-size: 35px;
 }
 
+.choice-button {
+  width: 131px;
+}
+
+.service-buttons {
+  width: 100%;
+  flex-wrap: wrap;
+}
+
 .services {
   grid-template-columns: 1fr 1fr;
   grid-row-gap: 40px;
-  padding: 204px 50px 70px 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 260px;
   grid-column-gap: 80px;
 }  
 
@@ -742,9 +787,11 @@ align-items: center;
   font-size: 35px;
 }
 
-.prices-text {
-  font-size: 25px;
-  width: 296px ;
+.contact-button {
+  width: 100px;
+  height: 35px;
+  font-size: 15px;
+  line-height: 33px;
 }
 
 .prices-info {
@@ -758,9 +805,30 @@ align-items: center;
   padding: 50px;
 }
 
+.rates {
+  width: 204px;
+}
+
+.rate-button {
+  width: 180px;
+}
+
+.rate-footer-line {
+  font-size: 8px;
+}
+
+.rate-button-title{
+  font-size: 15px;
+}
+
+.prices-text {
+  font-size: 20px;
+  line-height: 35px;
+}
+
 .leafs2 {
-  width: 152px;
-  height: 175px;
+  width: 126px;
+  height: 155px;
   padding-top: 30px;
 }
 
@@ -780,8 +848,17 @@ align-items: center;
   margin-top: 300px;
 }
 
+.contact-woman.active {
+  margin-top: 70px;
+}
+
 .select-city {
   margin-top: 100px;
+  width: 360px;
+}
+
+.city-card {
+  width: 360px;
 }
 
 .city-contacts {
@@ -796,6 +873,99 @@ align-items: center;
   flex-direction: column;
   height: 181px;
 }
+}
+
+@media (max-width: 464px) {
+  .header-content {
+    justify-content: space-between;
+  }
+
+  .burger {
+    display: flex;
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30px;
+    height: 18px;
+    margin-right: 25px;
+  }
+  
+  .burger span {
+    height: 2px;
+    width: 80%;
+    transform: scale(1);
+    background-color: #636060;
+  }
+  
+  .burger::before, .burger::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #636060;
+    transition: all 0.3s ease 0s;
+  }
+  
+  .burger::before {top: 0;}
+  .burger::after {bottom: 0;}
+  
+  .burger.active span {
+    transform: scale(0);
+  }
+  
+  .burger.active::before {
+    top: 50%;
+    transform: translateY(-50%);
+    transform: rotate(45deg);
+  }
+  
+  .burger.active::after {
+    top: 50%;
+    transform: translateY(-50%);
+    transform: rotate(-45deg);
+  }
+  
+  .main-menu {
+    /* display: none; */
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    position: fixed;
+    height: 100%;
+    width: 60%;
+    bottom: 0;
+    z-index: 1;
+    padding: 90px 55px;
+    background-color: #d6e7d2;
+    row-gap: 30px;
+    transform: translateX(100%); 
+    transition: transform 0.3s ease;
+  }
+  
+  .background {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    filter: blur(100px);
+    background-color: #ffffff;
+    top: 0;
+  }
+  
+  .open {
+    display: flex !important;
+    transform: translateX(0);
+  }
+  
+  .open-burger {
+    position: fixed;
+    right: 10px;
+  }
+  
+  .unscroll {
+    overflow: hidden;
+  }
 }
 
 @media (max-width: 380px) {
@@ -939,8 +1109,7 @@ align-items: center;
 }
 
 .about {
-  padding-left: 25px;
-  padding-right: 25px;
+  padding: 0 25px 0 25px;
 }
 
 .houseplant {
@@ -948,7 +1117,6 @@ align-items: center;
   height: 147px;
   margin-bottom: 31px;
 }
-
 
 .service-content {
   margin-left: 25px;
@@ -964,6 +1132,7 @@ align-items: center;
   width: 120px;
   font-size: 15px;
 }
+
 .service-buttons {
   width: 250px;
   flex-wrap: wrap;
@@ -985,20 +1154,6 @@ align-items: center;
   font-size: 25px;
 }
 
-.rates {
-  height: 235px;
-  width: 224px;
-}
-
-.rate-button {
-  width: 180px;
-  height: 50px;
-}
-
-.rate-button-title{
-  font-size: 15px;
-}
-
 .prices-info {
   margin-top: 19px;
   align-items: center;
@@ -1010,10 +1165,11 @@ align-items: center;
   font-size: 20px;
   line-height: 35px;
   text-align: center;
+  margin-top: 20px;
 }
 
 .contact-button {
-  margin-top: 14px;
+  margin-top: 20px;
   width: 120px;
   height: 35px;
   font-size: 15px;
@@ -1026,6 +1182,12 @@ align-items: center;
 
 .contacts-title {
   font-size: 25px;
+  width: 120px;
+}
+
+.contacts {
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .select-city {
@@ -1035,9 +1197,26 @@ align-items: center;
 }
 
 .contact-woman {
-  margin-top: 132px;
+  margin-top: 332px;
   width: 100px;
   height: 124px;
+}
+
+.contact-woman.active {
+  margin-top: 102px;
+}
+
+.city-card {
+  width: 300px;
+  padding: 15px;
+}
+
+.city-data {
+  font-size: 14px;
+}
+
+.city-metadata {
+  font-size: 14px;
 }
 
 .footer {

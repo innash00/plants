@@ -99,9 +99,11 @@ document.querySelector('.select-arrow').addEventListener('click', function() {  
         document.querySelector('.city-window').classList.toggle('active');
         this.classList.toggle('active');
         document.querySelector('.select-city').classList.toggle('active');
+        document.querySelector('.contact-woman').classList.toggle('active');
     } else {
         document.querySelector('.city-window').classList.toggle('active');
         this.classList.toggle('active');
+        document.querySelector('.contact-woman').classList.toggle('active');
     }
 })
 
@@ -111,7 +113,7 @@ function openCityWindow(event) {          //открытие окошка с а�
     document.querySelector('.select-city').classList.add('active');
     document.querySelector('.city-window').classList.remove('active');
     document.querySelector('.select-arrow').classList.remove('active');
-
+    document.querySelector('.contact-woman').classList.toggle('active');
     document.querySelector('.city-card').classList.add('active');
     switch(cityName) {
         case 'Canandaigua, NY':
@@ -141,7 +143,6 @@ const cities = document.querySelectorAll('.city-window p');
 cities.forEach(city => {
     city.addEventListener('click', openCityWindow);
 })
-
 
 function makeCall() {
     const selectedPhone = document.querySelector('.city-phone').textContent;
